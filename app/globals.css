@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+button {
+  cursor: pointer;
+}
+
+.title {
+  color: darkblue;
+  font-weight: bold;
+}
