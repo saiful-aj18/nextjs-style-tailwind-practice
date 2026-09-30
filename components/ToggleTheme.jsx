@@ -1,21 +1,26 @@
-'use client'
+"use client";
 
-import { useState } from "react"
+import { useState, useEffect } from "react";
 
 const ToggleTheme = ({ children }) => {
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(false);
 
-  const darkStyle = 'bg-white text-black'
-  const lightStyle = 'bg-black text-white'
+  useEffect(() => {
+    if (dark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [dark]);
 
   return (
     <button
       onClick={() => setDark(!dark)}
-      className={dark ? darkStyle : lightStyle}
+      className="px-4 py-2 text-sm font-medium border rounded-lg transition-all cursor-pointer shadow-sm bg-slate-100 text-slate-900 border-slate-300 dark:bg-slate-800 dark:text-white dark:border-slate-700 hover:opacity-90"
     >
-      { children }
+      {children} {dark ? "🌙" : "☀️"}
     </button>
-  )
-}
+  );
+};
 
 export default ToggleTheme;

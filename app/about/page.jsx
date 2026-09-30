@@ -9,7 +9,7 @@ const About = () => {
         About Page
       </h1>
 
-      <p className="text-slate-600 max-w-xl leading-relaxed">
+      <p className="text-slate-600 dark:text-white max-w-xl leading-relaxed">
         Here you can find information about our application, its features, and the team behind it. We are committed to providing the best user experience and continuously improving our platform.
       </p>
 

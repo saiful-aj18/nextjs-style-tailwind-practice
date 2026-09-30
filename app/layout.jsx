@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body
-        className="max-w-300 mx-auto py-24 min-h-full flex flex-col"
+        className="max-w-300 mx-auto py-24 min-h-full flex flex-col bg-white text-slate-900 dark:bg-slate-900 dark:text-white transition-colors duration-300"
       >
         <nav>
           <ul className="flex gap-5">
